@@ -1,0 +1,119 @@
+/* styles/Post.module.css */
+.post {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .postHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  
+  .postAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+  }
+  
+  .postUserInfo {
+    flex: 1;
+  }
+  
+  .postUserInfo h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #050505;
+    font-weight: 600;
+  }
+  
+  .postTime {
+    font-size: 13px;
+    color: #65676b;
+    display: block;
+    margin-top: 2px;
+  }
+  
+  .postOptions {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #65676b;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .postOptions:hover {
+    background-color: #f0f2f5;
+  }
+  
+  .postContent {
+    margin-bottom: 16px;
+  }
+  
+  .postContent p {
+    margin: 0 0 16px 0;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #050505;
+  }
+  
+  .postImage {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 500px;
+    object-fit: cover;
+    margin-top: 12px;
+  }
+  
+  .postStats {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #e4e6eb;
+    border-bottom: 1px solid #e4e6eb;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #65676b;
+  }
+  
+  .postActions {
+    display: flex;
+  }
+  
+  .postActions button {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #65676b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background-color 0.2s;
+  }
+  
+  .postActions button:hover {
+    background-color: #f0f2f5;
+  }

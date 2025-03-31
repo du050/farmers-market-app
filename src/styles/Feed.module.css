@@ -1,0 +1,206 @@
+.appContainer {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.leftSidebar {
+  grid-column: 1;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.mainContent {
+  grid-column: 2;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.rightSidebar {
+  grid-column: 3;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.feedContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Sidebar Styles */
+.sidebarSection {
+  margin-bottom: 30px;
+}
+
+.sidebarTitle {
+  font-size: 16px;
+  color: #65676b;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e4e6eb;
+}
+
+.sidebarMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarMenu li {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sidebarMenu li:hover {
+  background-color: #f0f2f5;
+}
+
+.activeMenuItem {
+  background-color: #f0f2f5;
+  color: #1877f2;
+}
+
+/* Create Post */
+.createPost {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.postInput {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.postInput input {
+  flex: 1;
+  border: none;
+  background-color: #f0f2f5;
+  border-radius: 20px;
+  padding: 10px 16px;
+  margin-left: 12px;
+  font-size: 15px;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.postInput input:focus {
+  background-color: #e4e6eb;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.postActions {
+  display: flex;
+  border-top: 1px solid #e4e6eb;
+  padding-top: 10px;
+}
+
+.postActions button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #65676b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.postActions button:hover {
+  background-color: #f0f2f5;
+}
+
+/* Right Sidebar Content */
+.specialItem, .eventItem {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  gap: 12px;
+  transition: background-color 0.2s;
+}
+
+.specialItem:hover, .eventItem:hover {
+  background-color: #f0f2f5;
+}
+
+.specialItem img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.specialItem h4, .eventItem h4 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+}
+
+.specialItem p, .eventItem p {
+  margin: 0;
+  font-size: 13px;
+  color: #65676b;
+}
+
+.eventDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f2f5;
+  padding: 8px;
+  border-radius: 6px;
+  min-width: 40px;
+}
+
+.eventDate span:first-child {
+  font-size: 12px;
+  color: #1877f2;
+  font-weight: bold;
+}
+
+.eventDate span:last-child {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Posts List */
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
