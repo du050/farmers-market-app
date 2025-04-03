@@ -1,9 +1,15 @@
 // src/app/page.tsx
+import React from 'react';
+import Feed from '../app/feed/page';
+
+
 export default function Home() {
+  // Sample data for featured vendors
+ 
   return (
-    <div>
-      <h1>Welcome to Farmers Market</h1>
-      <p>Discover the best fresh produce from local farmers.</p>
+    <div className="space-y-8">
+      {/* Hero Section */}
+      <Feed />
     </div>
   );
 }

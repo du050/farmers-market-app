@@ -1,8 +1,8 @@
-// components/ui/Navbar.tsx
-
+// components/layout/Navbar.tsx
 import React from 'react';
-import styles from '../../styles/Navbar.module.css'; // Adjust the path as necessary
-import { FaSearch, FaUserCircle } from 'react-icons/fa';
+import styles from '../../styles/Navbar.module.css';
+import { FaSearch, FaShoppingBasket, FaUserCircle } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   return (
@@ -11,7 +11,12 @@ const Navbar: React.FC = () => {
         <FaSearch className={styles.icon} />
       </div>
       <div className={styles.logo}>
-        <h1 className={styles.logoText}>Logo</h1>
+        <Link href="/">
+          <h1 className={styles.logoText}>
+            <FaShoppingBasket className="inline-block mr-2" />
+            Farmers Market
+          </h1>
+        </Link>
       </div>
       <div className={styles.iconRight}>
         <FaUserCircle className={styles.icon} />

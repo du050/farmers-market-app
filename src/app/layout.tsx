@@ -33,30 +33,28 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body>
         {/* Header */}
-        <header className="bg-white shadow-sm">
+        <header>
           <Navbar />
         </header>
 
-        {/* Main Content Area */}
-        <div className="flex flex-1">
+        {/* Main Content Area with Sidebar */}
+        <div style={{ display: 'flex', minHeight: 'calc(100vh - 128px)' }}>
           {/* Left Sidebar */}
-          <div className="w-64 bg-gray-800 text-white">
+          <aside style={{ width: '250px', flexShrink: 0, borderRight: '1px solid #e2e8f0' }}>
             <Sidebar sections={sidebarSections} position="left" />
-             {/* Main Content */}
-              <main className="flex-1 p-6 bg-gray-50 min-w-0">
-                <div className="max-w-6xl mx-auto">
-                  {children}
-                </div>
-              </main>
-          </div>
-
+          </aside>
+          
+          {/* Main Content */}
+          <main style={{ flex: 1, padding: '24px', backgroundColor: '#f7fafc' }}>
+            {children}
+          </main>
         </div>
 
         {/* Footer */}
-        <footer className="bg-white p-4 text-center border-t">
-          <p className="text-gray-600">© 2025 Farmers Market. All rights reserved.</p>
+        <footer style={{ padding: '16px', textAlign: 'center', borderTop: '1px solid #e2e8f0' }}>
+          <p style={{ color: '#718096' }}>© 2025 Farmers Market. All rights reserved.</p>
         </footer>
       </body>
     </html>
