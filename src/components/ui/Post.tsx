@@ -14,6 +14,7 @@ interface PostProps {
   timestamp: string;
   likes: number;
   comments: number;
+  location?: string;
 }
 
 const Post: React.FC<PostProps> = ({ user, content, image, timestamp, likes, comments }) => {

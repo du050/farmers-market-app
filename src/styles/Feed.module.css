@@ -24,6 +24,35 @@
   margin: 0 auto;
 }
 
+.filterTabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  
+}
+
+.filterButton{
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #65676b;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filterButton:hover {
+  background-color: #f3ffbd;
+  color: #000000;
+}
+.filterButton.active {
+  background-color: #cacaca;
+  color: #edff4c;
+}
+
+
+
 .rightSidebar {
   grid-column: 3;
   position: sticky;
