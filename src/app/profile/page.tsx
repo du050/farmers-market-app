@@ -21,15 +21,15 @@ const ProfilePage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('posts');
   
   const posts = [
-    { id: 1, image: "/avatarpic.png", likes: 243, comments: 56 },
-    { id: 2, image: "/avatarpic.png", likes: 189, comments: 34 },
-    { id: 3, image: "/avatarpic.png", likes: 432, comments: 78 },
-    { id: 4, image: "/avatarpic.png", likes: 321, comments: 45 },
-    { id: 5, image: "/avatarpic.png", likes: 278, comments: 39 },
-    { id: 6, image: "/avatarpic.png", likes: 512, comments: 87 },
-    { id: 7, image: "/avatarpic.png", likes: 156, comments: 23 },
-    { id: 8, image: "/avatarpic.png", likes: 389, comments: 67 },
-    { id: 9, image: "/avatarpic.png", likes: 421, comments: 72 }
+    { id: 1, image: "/bee1.jpg", likes: 243, comments: 56 },
+    { id: 2, image: "/bee2.jpg", likes: 189, comments: 34 },
+    { id: 3, image: "/bee3.jpg", likes: 432, comments: 78 },
+    { id: 4, image: "/bee4.jpg", likes: 321, comments: 45 },
+    { id: 5, image: "/bee5.jpg", likes: 278, comments: 39 },
+    { id: 6, image: "/bee6.jpg", likes: 512, comments: 87 },
+    { id: 7, image: "/bee7.jpg", likes: 156, comments: 23 },
+    { id: 8, image: "/bee8.jpg", likes: 389, comments: 67 },
+    { id: 9, image: "/bee9.jpg", likes: 421, comments: 72 }
   ];
 
   const handleFollow = () => {
