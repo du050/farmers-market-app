@@ -7,7 +7,7 @@ export async function getVendorLocations() {
     try {
         const { data, error } = await supabase
         .from(MAP_TABLE)
-        .select('id, latitude, longitude, vender_name');
+        .select('id, latitude, longitude, vender_name, icon_url');
         if (error) {
             console.error("Error fetching vender locations:", error.message);
             return { data: null, error };

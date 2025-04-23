@@ -1,6 +1,12 @@
 'use client';
+import React from 'react';
+import dynamic from 'next/dynamic';
 
-import MapClient from '@/components/layout/MapClient';
+
+const MapClient = dynamic(() => import('@/components/layout/MapClient'),{
+  ssr: false,
+});
+
 export default function SearchPage() {
   return (
     <div>

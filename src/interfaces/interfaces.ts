@@ -6,7 +6,7 @@ export interface User {
     identities?: {
         id: string;
         user_id: string;
-        identity_data: any; // You might want to be more specific here
+        identity_data: any; 
         provider: string;
         created_at: string;
         last_sign_in_at: string;
@@ -22,5 +22,17 @@ export interface AuthContextType {
     user: User | null;
     gitHubSignIn: () => Promise<void>;
     supabaseSignOut: () => Promise<void>;
-    // Add other auth-related state or functions if needed
+}
+
+export interface Location {
+    latitude: number;
+    longitude: number;
+    vender_name: string; 
+    id: string;
+    icon_url?: string;
+}
+
+export interface VenderMarkerProps {  
+    mapData: Location[];
+    
 }
