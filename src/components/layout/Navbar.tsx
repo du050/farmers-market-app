@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.iconLeft}>
-        <FaSearch className={styles.icon} />
+        <FaSearch className={styles.icon} href='/src/app/search' />
       </div>
       <div className={styles.logo}>
         <Link href="/">
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
       <div className={styles.iconRight}>
-        <FaUserCircle className={styles.icon} />
+        <FaUserCircle className={styles.icon} href='/src/app/profile'/>
       </div>
     </nav>
   );
