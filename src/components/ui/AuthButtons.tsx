@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useUserAuth } from '../../lib/supabase_auth';
-import { User } from '../../interfaces/interfaces'; 
+
 
 const AuthButtons = () => {
     const { user, gitHubSignIn, supabaseSignOut } = useUserAuth();
