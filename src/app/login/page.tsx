@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Profile.module.css';
-import AuthButtons from '../../../components/ui/AuthButtons';
+import AuthButtons from '../../components/ui/AuthButtons';
 
 const Login: React.FC = () => {
   const router = useRouter();
@@ -11,8 +11,8 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState('');*/  // this can be put in later
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();    
-    router.push('/feed'); 
+    e.preventDefault();
+    router.push('/feed');
   };
 
   return (
