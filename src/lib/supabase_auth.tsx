@@ -2,7 +2,7 @@
 
 import { useContext, createContext, useState, useEffect } from "react";
 import supabase from "./supabase";
-import { User, AuthContextType } from "../interfaces/interfaces"; // Adjust path
+import { User, AuthContextType } from "../interfaces/interfaces"; 
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
