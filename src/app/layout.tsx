@@ -2,12 +2,17 @@ import { AuthContextProvider } from '@/lib/supabase_auth';
 import type { Metadata } from "next";
 import Navbar from '../components/layout/Navbar';
 import Sidebar from "../components/layout/Sidebar";
+
 import "../styles/globals.css";
+
+
 
 export const metadata: Metadata = {
   title: "Farmers Market",
   description: "A marketplace for fresh farm produce",
 };
+
+
 
 export default function RootLayout({
   children,
