@@ -8,8 +8,7 @@ import AuthButtons from '../../components/ui/AuthButtons';
 
 const Login: React.FC = () => {
   const router = useRouter();
-  {const [email, setEmail] = useState('');}
-  const [password, setPassword] = useState('');
+ 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

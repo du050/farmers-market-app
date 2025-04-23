@@ -1,6 +1,6 @@
 import supabase from "./supabase";
 
-const VENDER_TABLE = "vendor_table";
+
 const MAP_TABLE = "map_table";
 
 export async function getVendorLocations() {
