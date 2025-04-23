@@ -7,13 +7,12 @@ import AuthButtons from '../../../components/ui/AuthButtons';
 
 const Login: React.FC = () => {
   const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  /*{const [email, setEmail] = useState('');}
+  const [password, setPassword] = useState('');*/  // this can be put in later
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Logic to authenticate the user
-    router.push('/feed'); // Redirect to the feed page
+    e.preventDefault();    
+    router.push('/feed'); 
   };
 
   return (
