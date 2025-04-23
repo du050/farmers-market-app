@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/Button.module.css'; // Adjust the path as necessary
 
 interface ButtonProps {
     label: string;

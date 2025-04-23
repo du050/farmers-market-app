@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import Navbar from '../components/layout/Navbar';
 import Sidebar from "../components/layout/Sidebar";
+// import Login from "./login/page";
 
 export const metadata: Metadata = {
   title: "Farmers Market",
   description: "A marketplace for fresh farm produce",
 };
+
+
 
 export default function RootLayout({
   children,
