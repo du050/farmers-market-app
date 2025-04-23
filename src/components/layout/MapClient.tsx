@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -13,14 +13,38 @@ L.Icon.Default.mergeOptions({
 });
 
 export default function MapClient() {
+    const [position, setPosition] = React.useState<{lat: number, lng: number} | null>(null);
+    const [error, setError] = React.useState<string | null>(null);
+
+    useEffect(() => {
+        if(!navigator.geolocation) {
+            setError('Geolocation is not supported by this browser.');
+            
+        }
+        navigator.geolocation.getCurrentPosition((position => {
+            setPosition({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            });
+            
+        }
+        ), (error) => {
+            setError(error.message);
+        
+        });
+    }, []);
+
+    if (error) return <p>{error}</p>;
+    if (!position) return <p>Getting your location...</p>;
+
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '400px', width: '100%' }}>
+    <MapContainer center={[position.lat, position.lng]} zoom={13} style={{ height: '400px', width: '100%' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
       />
-      <Marker position={[51.505, -0.09]}>
-        <Popup>Hello from Leaflet!</Popup>
+      <Marker position={[position.lat, position.lng]}>
+        <Popup>You are here</Popup>
       </Marker>
     </MapContainer>
   );
