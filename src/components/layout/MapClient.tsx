@@ -53,6 +53,8 @@ export default function MapClient() {
       fetchLocations();
     }, []);
 
+    console.log("About to render MapClient with vendorLocations:", vendorLocations);
+
     if (error) return <p>{error}</p>;
     if (!position) return <p>Getting your location...</p>;
 
@@ -65,6 +67,7 @@ export default function MapClient() {
       <Marker position={[position.lat, position.lng]}>
         <Popup>You are here</Popup>
       </Marker>
+      
       <VenderMarker mapData={vendorLocations} />
     </MapContainer>
   );
