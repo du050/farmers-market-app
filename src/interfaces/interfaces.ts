@@ -5,7 +5,11 @@ export interface User {
     role: string;
     identities?: {
         id: string;
+<<<<<<< Updated upstream
         user_id: string;        
+=======
+        user_id: string;         
+>>>>>>> Stashed changes
         provider: string;
         created_at: string;
         last_sign_in_at: string;

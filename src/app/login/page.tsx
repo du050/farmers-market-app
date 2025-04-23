@@ -7,7 +7,10 @@ import AuthButtons from '../../components/ui/AuthButtons';
 
 const Login: React.FC = () => {
   const router = useRouter();
+<<<<<<< Updated upstream
  
+=======
+>>>>>>> Stashed changes
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
