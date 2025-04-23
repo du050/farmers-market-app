@@ -6,7 +6,7 @@ export interface User {
     identities?: {
         id: string;
         user_id: string;
-        identity_data: any; 
+        identity_data: any;
         provider: string;
         created_at: string;
         last_sign_in_at: string;
