@@ -1,7 +1,7 @@
 // pages/login.tsx
 'use client';
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import styles from '../../styles/Profile.module.css';
 import AuthButtons from '../../components/ui/AuthButtons';
 
