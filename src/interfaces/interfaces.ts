@@ -5,8 +5,7 @@ export interface User {
     role: string;
     identities?: {
         id: string;
-        user_id: string;
-        identity_data: any;
+        user_id: string;        
         provider: string;
         created_at: string;
         last_sign_in_at: string;
