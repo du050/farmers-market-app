@@ -1,8 +1,6 @@
 "use client"
 
-import React from 'react';
 import { useUserAuth } from '../../lib/supabase_auth';
-
 
 const AuthButtons = () => {
     const { user, gitHubSignIn, supabaseSignOut } = useUserAuth();
