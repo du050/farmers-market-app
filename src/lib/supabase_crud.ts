@@ -1,17 +1,20 @@
 import supabase from "./supabase";
 
-const TABLE_NAME = "user_details";
+const VENDER_TABLE = "vendor_table";
+const MAP_TABLE = "map_table";
 
-export async function getUsers() {
+export async function getVendorLocations() {
     try {
-        const { data, error } = await supabase.from(TABLE_NAME).select("*");
+        const { data, error } = await supabase
+        .from(MAP_TABLE)
+        .select('id, latitude, longitude, vender_name');
         if (error) {
-            console.error("Error fetching users:", error.message);
+            console.error("Error fetching vender locations:", error.message);
             return { data: null, error };
         }
         return { data, error: null };
     } catch (error) {
-        console.error("Unexpected error fetching users:", error);
+        console.error("Unexpected error fetching vender locations:", error);
         return { data: null, error };
     }
 }

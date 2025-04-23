@@ -1,8 +1,8 @@
+import { AuthContextProvider } from '@/lib/supabase_auth';
 import type { Metadata } from "next";
-import "../styles/globals.css";
 import Navbar from '../components/layout/Navbar';
 import Sidebar from "../components/layout/Sidebar";
-import { AuthContextProvider } from '@/lib/supabase_auth';
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Farmers Market",
@@ -41,7 +41,7 @@ export default function RootLayout({
             <Navbar />
           </header>
 
-          {/* Main Content Area with Sidebar */}
+          {/* Main Content Area with Sidebar*/ }
           <div style={{ display: 'flex', minHeight: 'calc(100vh - 128px)' }}>
             {/* Left Sidebar */}
             <aside style={{ width: '250px', flexShrink: 0, borderRight: '1px solid #e2e8f0' }}>
@@ -54,7 +54,7 @@ export default function RootLayout({
             </main>
           </div>
 
-          {/* Footer */}
+          {/*Footer*/}
           <footer style={{ padding: '16px', textAlign: 'center', borderTop: '1px solid #e2e8f0' }}>
             <p style={{ color: '#718096' }}>© 2025 Farmers Market. All rights reserved.</p>
           </footer>
