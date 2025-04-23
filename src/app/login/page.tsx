@@ -2,7 +2,8 @@
 'use client';
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../../styles/Profile.module.css'; // Adjust the path as necessary
+import styles from '../../styles/Profile.module.css';
+import AuthButtons from '../../../components/ui/AuthButtons';
 
 const Login: React.FC = () => {
   const router = useRouter();
@@ -18,23 +19,8 @@ const Login: React.FC = () => {
   return (
     <div className={styles.loginContainer}>
       <h1>Login to FarmConnect</h1>
+      <AuthButtons />
       <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className={styles.input}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className={styles.input}
-          required
-        />
         <button type="submit" className={styles.button}>Login</button>
       </form>
     </div>

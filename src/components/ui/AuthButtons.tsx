@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useUserAuth } from '../../lib/supabase_auth';
-import { User } from '../types/auth'; // Adjust path
+import { User } from '../../interfaces/interfaces'; 
 
 const AuthButtons = () => {
     const { user, gitHubSignIn, supabaseSignOut } = useUserAuth();
@@ -11,7 +11,7 @@ const AuthButtons = () => {
         <div>
             {user ? (
                 <>
-                    <p>Logged in as: {user.email || user.id}</p>
+                    <p>Logged in as: {user?.email || user?.id}</p>
                     <button onClick={supabaseSignOut}>Sign Out</button>
                 </>
             ) : (
