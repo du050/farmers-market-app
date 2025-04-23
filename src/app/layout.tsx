@@ -37,16 +37,16 @@ export default function RootLayout({
       <body>
         <AuthContextProvider>
           {/* Header */}
-          {/*<header>
+          <header>
             <Navbar />
-          </header>*/}
+          </header>
 
           {/* Main Content Area with Sidebar */}
           <div style={{ display: 'flex', minHeight: 'calc(100vh - 128px)' }}>
             {/* Left Sidebar */}
-            {/*<aside style={{ width: '250px', flexShrink: 0, borderRight: '1px solid #e2e8f0' }}>
+            <aside style={{ width: '250px', flexShrink: 0, borderRight: '1px solid #e2e8f0' }}>
               <Sidebar sections={sidebarSections} position="left" />
-            </aside>*/}
+            </aside>
             
             {/* Main Content */}
             <main style={{ flex: 1, padding: '24px', backgroundColor: '#f7fafc' }}>
